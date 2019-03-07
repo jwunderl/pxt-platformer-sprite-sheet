@@ -1,6 +1,6 @@
-namespace platformerspritesheet {
+namespace sprites.platformer {
     //% fixedInstance
-    export const main_right_idle = img`
+    export const mainRightIdle = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -20,7 +20,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_crouch = img`
+    export const mainRightCrouch = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -40,7 +40,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_run0 = img`
+    export const mainRightRun0 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 E E E E E E E 0 0 0
@@ -60,7 +60,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_run1 = img`
+    export const mainRightRun1 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -80,7 +80,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_run2 = img`
+    export const mainRightRun2 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 E E E E E E E 0 0 0
@@ -100,7 +100,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_run3 = img`
+    export const mainRightRun3 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -120,7 +120,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_jump0 = img`
+    export const mainRightJump0 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -140,7 +140,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_jump1 = img`
+    export const mainRightJump1 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -160,7 +160,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_right_jump2 = img`
+    export const mainRightJump2 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -180,7 +180,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_idle = img`
+    export const mainLeftIdle = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -200,7 +200,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_crouch = img`
+    export const mainLeftCrouch = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -220,7 +220,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_run0 = img`
+    export const mainLeftRun0 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E 0 0 0 0 0 0
@@ -240,7 +240,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_run1 = img`
+    export const mainLeftRun1 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -260,7 +260,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_run2 = img`
+    export const mainLeftRun2 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E 0 0 0 0 0 0
@@ -280,7 +280,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_run3 = img`
+    export const mainLeftRun3 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -300,7 +300,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_jump0 = img`
+    export const mainLeftJump0 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -320,7 +320,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_jump1 = img`
+    export const mainLeftJump1 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0
@@ -340,7 +340,7 @@ namespace platformerspritesheet {
     `;
 
     //% fixedInstance
-    export const main_left_jump2 = img`
+    export const mainLeftJump2 = img`
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
         0 0 0 E E E E E E E E E E 0 0 0

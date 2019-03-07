@@ -1,39 +1,361 @@
 namespace platformerspritesheet {
     //% fixedInstance
-    export const main_right_idle = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0dd0e0000000000eeeeddbddd0b0000eededdadddbafb00eeddddcdfdaafa00eefdffcdfcaafa00eeddddcdfc0a0000eeddddcdbc0a0000eeddddcdbcbafb00eeddddcdfcaafa00eefdffcdfcaafa00eeddddcdfd0a0000e0ddddaddd000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_crouch = image.ofBuffer(hex`e4101000000000000000000000000000000000000000e0dd0e00dd000000eeeeddbddd0b0000eededdadfcfa0000eeddddcdfcfa0000eefdffcdfcfa0000eeddddcdfc0a0000eeddddcdbc0a0000eeddddcdbcfa0000eeddddcdfcfa0000eefdffcdfcfa0000eeddddcdfc0a0000e0ddddaddd00000000000000d0000000000000000000`);
-    //% fixedInstance
-    export const main_right_run0 = image.ofBuffer(hex`e41010000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0eedebdfb0b0000eeeedecdfc0a0000eedddecdfcbafb00eeedddadddaafa00eededdadddaafa00eeddddcdfdaafa00eefdffcdfcaafa00eeddddcdbc0a0000e0dddd0d00000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_run1 = image.ofBuffer(hex`e4101000000000000000000000000000000000000000000000000000000000000000f00f000000000000b0fa0000eeeeddbbaf0a00e0eeeeddccaf0a00e0deeddddaad0000e0dededddaad0000e0eeddddccadfb00e0deddddccaffa00e0deffdfccaffa00e0deddddccab000000dedddd00000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_run2 = image.ofBuffer(hex`e41010000000000000000000000000000000000000000000000000000000000000000000000000000000000000e0eedebdfb0b0000eeeedecdfc0a0000eedddecdfcbafb00eeedddadddaafa00eededdadddaafa00eeddddcdfdaafa00eefdffcdfcaafa00eeddddcdbc0a0000e0dddd0d00000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_run3 = image.ofBuffer(hex`e4101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000eeeeddbbbf0000e0eeeeddccaf0000e0deedddccaffb00e0dededdccaffa00e0eeddddccaffa00e0deddddbaaf0000e0deffdfdaad0b00e0dedddddcad0a0000deddddd0f00a000000000000ff0f0000000000000000`);
-    //% fixedInstance
-    export const main_right_jump0 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0dd0e0000000000eeeeddbddd0b0000eededdadddbafb00eeddddcdfdaafa00eefdffcdfcaafa00eeddddcdfc0a0000eeddddcdbc0a0000eeddddcdbcbafb00eeddddcdfcaafa00eefdffcdfcaafa00eeddddcdfd0a0000e0ddddaddd000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_jump1 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0dd0e0000000000eeeeddbddd0b0000eededdadddba0f00eeddddcdfdaa0f00eefdffcdfcaa0f00eeddddcdfc0a0000eeddddcdbc0a0000eeddddcdbcba0f00eeddddcdfcaa0f00eefdffcdfcaa0f00eeddddcdfd0a0000e0ddddaddd000000000000000000000000000000000000`);
-    //% fixedInstance
-    export const main_right_jump2 = image.ofBuffer(hex`e410100000000000d000000000000000dd0d000000e0dd0ea00a000000eeeeddbdfc0b0000eededdcdfcba0f00eeddddcdfcaa0f00eefdffcdfcaa0f00eeddddcdfc0a0000eeddddcdbc0a0000eeddddcdbcba0f00eeddddcdfcaa0f00eefdffcdfcaa0f00eeddddbdfc0a0000e0ddddad0a000000000000dd0d000000000000d0000000`);
+    export const main_right_idle = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D E E D D D D D D D D D 0 0
+        0 0 D E D D F D D D D F D D 0 0
+        0 0 E D D D F D D D D F D D 0 0
+        0 0 0 D D D F D D D D F D D 0 0
+        0 0 0 D D D D D D D D D D D 0 0
+        0 0 0 B A C C C C C C C C A 0 0
+        0 0 0 D D D C C C C C C D D 0 0
+        0 0 0 D D F F F B B F F F D 0 0
+        0 0 0 B A A A A A A A A A 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
 
     //% fixedInstance
-    export const main_left_idle = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0ddddaddd000000eeddddcdfd0a0000eefdffcdfcaafa00eeddddcdfcaafa00eeddddcdbcbafb00eeddddcdbc0a0000eeddddcdfc0a0000eefdffcdfcaafa00eeddddcdfdaafa00eededdadddbafb00eeeeddbddd0b0000e0dd0e0000000000000000000000000000000000000000`);
+    export const main_right_crouch = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D E E D D D D D D D D D 0 0
+        0 0 D E D D F D D D D F D D 0 0
+        0 0 E D D D F D D D D F D D 0 0
+        0 0 0 D D D F D D D D F D D 0 0
+        0 0 0 D D D D D D D D D D D 0 0
+        0 0 0 B A C C C C C C C C A 0 0
+        0 0 D D C C C C C C C C C D 0 0
+        0 0 D D F F F F B B F F F D D 0
+        0 0 0 B A A A A A A A A A 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_crouch = image.ofBuffer(hex`e41010000000000000000000000000000000d0000000e0ddddaddd000000eeddddcdfc0a0000eefdffcdfcfa0000eeddddcdfcfa0000eeddddcdbcfa0000eeddddcdbc0a0000eeddddcdfc0a0000eefdffcdfcfa0000eeddddcdfcfa0000eededdadfcfa0000eeeeddbddd0b0000e0dd0e00dd0000000000000000000000000000000000`);
+    export const main_right_run0 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 E E E E E E E 0 0 0
+        0 0 0 0 0 E E E E E E E E E 0 0
+        0 0 0 0 0 E E D D E D D D D 0 0
+        0 0 0 0 0 E E D E D D F D D 0 0
+        0 0 0 0 0 E E E D D D F D D 0 0
+        0 0 0 0 0 D D D D D D F D D 0 0
+        0 0 0 0 0 D D D D D D D D D 0 0
+        0 0 0 0 0 B C C A A C C C 0 0 0
+        0 0 0 0 0 B C C D D D C C 0 0 0
+        0 0 0 0 0 F F F D D F F B 0 0 0
+        0 0 0 0 0 B A A A A A A A 0 0 0
+        0 0 0 0 0 0 0 B A A A A 0 0 0 0
+        0 0 0 0 0 0 0 B A A A A 0 0 0 0
+        0 0 0 0 0 0 0 F F F F F 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_run0 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0dddd0d00000000eeddddcdbc0a0000eefdffcdfcaafa00eeddddcdfdaafa00eededdadddaafa00eeedddadddaafa00eedddecdfcbafb00eeeedecdfc0a0000e0eedebdfb0b0000000000000000000000000000000000000000000000000000000000000000000000000000000000`);
+    export const main_right_run1 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 E E E E E E E 0 0 0
+        0 0 0 0 0 E E E E E E E E E 0 0
+        0 0 0 0 0 E E D D E D D D D 0 0
+        0 0 0 0 0 E E D E D D F D D 0 0
+        0 0 0 0 0 E E E D D D F D D 0 0
+        0 0 0 0 0 D D D D D D F D D 0 0
+        0 0 0 0 0 D D D D D D D D D 0 0
+        0 0 0 0 0 B C A A C C C C 0 0 0
+        0 0 0 0 0 B C D D C C C C 0 0 0
+        0 0 0 0 0 F F D D D F F B 0 0 0
+        0 0 0 F B A A A A A A A A 0 0 0
+        0 0 0 F A A A 0 0 B A A 0 0 0 0
+        0 0 0 0 F 0 0 0 0 F F F 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_run1 = image.ofBuffer(hex`e4101000000000000000000000000000000000000000dedddd00000000e0deddddccab0000e0deffdfccaffa00e0deddddccaffa00e0eeddddccadfb00e0dededddaad0000e0deeddddaad0000e0eeeeddccaf0a0000eeeeddbbaf0a000000000000b0fa000000000000f00f000000000000000000000000000000000000000000000000`);
+    export const main_right_run2 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 E E E E E E E 0 0 0
+        0 0 0 0 0 E E E E E E E E E 0 0
+        0 0 0 0 0 E E D D E D D D D 0 0
+        0 0 0 0 0 E E D E D D F D D 0 0
+        0 0 0 0 0 E E E D D D F D D 0 0
+        0 0 0 0 0 D D D D D D F D D 0 0
+        0 0 0 0 0 D D D D D D D D D 0 0
+        0 0 0 0 0 B C C A A C C C 0 0 0
+        0 0 0 0 0 B C C D D D C C 0 0 0
+        0 0 0 0 0 F F F D D F F B 0 0 0
+        0 0 0 0 0 B A A A A A A A 0 0 0
+        0 0 0 0 0 0 0 B A A A A 0 0 0 0
+        0 0 0 0 0 0 0 B A A A A 0 0 0 0
+        0 0 0 0 0 0 0 F F F F F 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_run2 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0dddd0d00000000eeddddcdbc0a0000eefdffcdfcaafa00eeddddcdfdaafa00eededdadddaafa00eeedddadddaafa00eedddecdfcbafb00eeeedecdfc0a0000e0eedebdfb0b0000000000000000000000000000000000000000000000000000000000000000000000000000000000`);
+    export const main_right_run3 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 E E E E E E E 0 0 0
+        0 0 0 0 0 E E E E E E E E E 0 0
+        0 0 0 0 0 E E D D E D D D D 0 0
+        0 0 0 0 0 E E D E D D F D D 0 0
+        0 0 0 0 0 E E E D D D F D D 0 0
+        0 0 0 0 0 D D D D D D F D D 0 0
+        0 0 0 0 0 D D D D D D D D D 0 0
+        0 0 0 0 0 B C C C C A A C 0 0 0
+        0 0 0 0 0 B C C C C B D D D 0 0
+        0 0 0 0 0 F F F F F F D D 0 F 0
+        0 0 0 0 0 B A A A A A A A F F 0
+        0 0 0 0 0 0 0 B A A 0 B A A F 0
+        0 0 0 0 0 0 0 F F F 0 0 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_run3 = image.ofBuffer(hex`e41010000000000000000000000000000000ff0f0000deddddd0f00a00e0dedddddcad0a00e0deffdfdaad0b00e0deddddbaaf0000e0eeddddccaffa00e0dededdccaffa00e0deedddccaffb00e0eeeeddccaf000000eeeeddbbbf0000000000000000000000000000000000000000000000000000000000000000000000000000000000`);
+    export const main_right_jump0 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D E E D D D D D D D D D 0 0
+        0 0 D E D D F D D D D F D D 0 0
+        0 0 E D D D F D D D D F D D 0 0
+        0 0 0 D D D F D D D D F D D 0 0
+        0 0 0 D D D D D D D D D D D 0 0
+        0 0 0 B A C C C C C C C C A 0 0
+        0 0 0 D D D C C C C C C D D 0 0
+        0 0 0 D D F F F B B F F F D 0 0
+        0 0 0 B A A A A A A A A A 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_jump0 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0ddddaddd000000eeddddcdfd0a0000eefdffcdfcaafa00eeddddcdfcaafa00eeddddcdbcbafb00eeddddcdbc0a0000eeddddcdfc0a0000eefdffcdfcaafa00eeddddcdfdaafa00eededdadddbafb00eeeeddbddd0b0000e0dd0e0000000000000000000000000000000000000000`);
+    export const main_right_jump1 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D E E D D D D D D D D D 0 0
+        0 0 D E D D F D D D D F D D 0 0
+        0 0 E D D D F D D D D F D D 0 0
+        0 0 0 D D D F D D D D F D D 0 0
+        0 0 0 D D D D D D D D D D D 0 0
+        0 0 0 B A C C C C C C C C A 0 0
+        0 0 0 D D D C C C C C C D D 0 0
+        0 0 0 D D F F F B B F F F D 0 0
+        0 0 0 B A A A A A A A A A 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_jump1 = image.ofBuffer(hex`e41010000000000000000000000000000000000000e0ddddaddd000000eeddddcdfd0a0000eefdffcdfcaa0f00eeddddcdfcaa0f00eeddddcdbcba0f00eeddddcdbc0a0000eeddddcdfc0a0000eefdffcdfcaa0f00eeddddcdfdaa0f00eededdadddba0f00eeeeddbddd0b0000e0dd0e0000000000000000000000000000000000000000`);
+    export const main_right_jump2 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D E E D D D D D D D D D 0 0
+        0 0 D E D D F D D D D F D D 0 0
+        0 0 E D D D F D D D D F D D 0 0
+        0 0 0 D D D F D D D D F D D 0 0
+        0 D 0 D D D D D D D D D D D D 0
+        D D A B C C C C C C C C B A D D
+        0 D A C C C C C C C C C C A D 0
+        0 0 0 F F F F F B B F F F 0 0 0
+        0 0 0 B A A A A A A A A A 0 0 0
+        0 0 0 0 B A A 0 0 B A A 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    `;
+
     //% fixedInstance
-    export const main_left_jump2 = image.ofBuffer(hex`e410100000000000d000000000000000dd0d000000e0ddddad0a000000eeddddbdfc0a0000eefdffcdfcaa0f00eeddddcdfcaa0f00eeddddcdbcba0f00eeddddcdbc0a0000eeddddcdfc0a0000eefdffcdfcaa0f00eeddddcdfcaa0f00eededdcdfcba0f00eeeeddbdfc0b0000e0dd0ea00a000000000000dd0d000000000000d0000000`);
+    export const main_left_idle = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D D D D D D D D D E E D 0 0
+        0 0 D D F D D D D F D D E D 0 0
+        0 0 D D F D D D D F D D D E 0 0
+        0 0 D D F D D D D F D D D 0 0 0
+        0 0 D D D D D D D D D D D 0 0 0
+        0 0 A C C C C C C C C A B 0 0 0
+        0 0 D D C C C C C C D D D 0 0 0
+        0 0 D F F F B B F F F D D 0 0 0
+        0 0 0 A A A A A A A A A B 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_crouch = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D D D D D D D D D E E D 0 0
+        0 0 D D F D D D D F D D E D 0 0
+        0 0 D D F D D D D F D D D E 0 0
+        0 0 D D F D D D D F D D D 0 0 0
+        0 0 D D D D D D D D D D D 0 0 0
+        0 0 A C C C C C C C C A B 0 0 0
+        0 0 D C C C C C C C C C D D 0 0
+        0 D D F F F B B F F F F D D 0 0
+        0 0 0 A A A A A A A A A B 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_run0 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E 0 0 0 0 0 0
+        0 0 E E E E E E E E E 0 0 0 0 0
+        0 0 D D D D E D D E E 0 0 0 0 0
+        0 0 D D F D D E D E E 0 0 0 0 0
+        0 0 D D F D D D E E E 0 0 0 0 0
+        0 0 D D F D D D D D D 0 0 0 0 0
+        0 0 D D D D D D D D D 0 0 0 0 0
+        0 0 0 C C C A A C C B 0 0 0 0 0
+        0 0 0 C C D D D C C B 0 0 0 0 0
+        0 0 0 B F F D D F F F 0 0 0 0 0
+        0 0 0 A A A A A A A B 0 0 0 0 0
+        0 0 0 0 A A A A B 0 0 0 0 0 0 0
+        0 0 0 0 A A A A B 0 0 0 0 0 0 0
+        0 0 0 0 F F F F F 0 0 0 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_run1 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E 0 0 0 0 0 0
+        0 0 E E E E E E E E E 0 0 0 0 0
+        0 0 D D D D E D D E E 0 0 0 0 0
+        0 0 D D F D D E D E E 0 0 0 0 0
+        0 0 D D F D D D E E E 0 0 0 0 0
+        0 0 D D F D D D D D D 0 0 0 0 0
+        0 0 D D D D D D D D D 0 0 0 0 0
+        0 0 0 C C C C A A C B 0 0 0 0 0
+        0 0 0 C C C C D D C B 0 0 0 0 0
+        0 0 0 B F F D D D F F 0 0 0 0 0
+        0 0 0 A A A A A A A A B F 0 0 0
+        0 0 0 0 A A B 0 0 A A A F 0 0 0
+        0 0 0 0 F F F 0 0 0 0 F 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_run2 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E 0 0 0 0 0 0
+        0 0 E E E E E E E E E 0 0 0 0 0
+        0 0 D D D D E D D E E 0 0 0 0 0
+        0 0 D D F D D E D E E 0 0 0 0 0
+        0 0 D D F D D D E E E 0 0 0 0 0
+        0 0 D D F D D D D D D 0 0 0 0 0
+        0 0 D D D D D D D D D 0 0 0 0 0
+        0 0 0 C C C A A C C B 0 0 0 0 0
+        0 0 0 C C D D D C C B 0 0 0 0 0
+        0 0 0 B F F D D F F F 0 0 0 0 0
+        0 0 0 A A A A A A A B 0 0 0 0 0
+        0 0 0 0 A A A A B 0 0 0 0 0 0 0
+        0 0 0 0 A A A A B 0 0 0 0 0 0 0
+        0 0 0 0 F F F F F 0 0 0 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_run3 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E 0 0 0 0 0 0
+        0 0 E E E E E E E E E 0 0 0 0 0
+        0 0 D D D D E D D E E 0 0 0 0 0
+        0 0 D D F D D E D E E 0 0 0 0 0
+        0 0 D D F D D D E E E 0 0 0 0 0
+        0 0 D D F D D D D D D 0 0 0 0 0
+        0 0 D D D D D D D D D 0 0 0 0 0
+        0 0 0 C A A C C C C B 0 0 0 0 0
+        0 0 D D D B C C C C B 0 0 0 0 0
+        0 F 0 D D F F F F F F 0 0 0 0 0
+        0 F F A A A A A A A B 0 0 0 0 0
+        0 F A A B 0 A A B 0 0 0 0 0 0 0
+        0 0 0 0 0 0 F F F 0 0 0 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_jump0 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D D D D D D D D D E E D 0 0
+        0 0 D D F D D D D F D D E D 0 0
+        0 0 D D F D D D D F D D D E 0 0
+        0 0 D D F D D D D F D D D 0 0 0
+        0 0 D D D D D D D D D D D 0 0 0
+        0 0 A C C C C C C C C A B 0 0 0
+        0 0 D D C C C C C C D D D 0 0 0
+        0 0 D F F F B B F F F D D 0 0 0
+        0 0 0 A A A A A A A A A B 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_jump1 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D D D D D D D D D E E D 0 0
+        0 0 D D F D D D D F D D E D 0 0
+        0 0 D D F D D D D F D D D E 0 0
+        0 0 D D F D D D D F D D D 0 0 0
+        0 0 D D D D D D D D D D D 0 0 0
+        0 0 A C C C C C C C C A B 0 0 0
+        0 0 D D C C C C C C D D D 0 0 0
+        0 0 D F F F B B F F F D D 0 0 0
+        0 0 0 A A A A A A A A A B 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    `;
+
+    //% fixedInstance
+    export const main_left_jump2 = img`
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+        0 0 0 E E E E E E E E E E 0 0 0
+        0 0 E E E E E E E E E E E E 0 0
+        0 0 D D D D D D D D D E E D 0 0
+        0 0 D D F D D D D F D D E D 0 0
+        0 0 D D F D D D D F D D D E 0 0
+        0 0 D D F D D D D F D D D 0 0 0
+        0 D D D D D D D D D D D D 0 D 0
+        D D A B C C C C C C C C B A D D
+        0 D A C C C C C C C C C C A D 0
+        0 0 0 F F F B B F F F F F 0 0 0
+        0 0 0 A A A A A A A A A B 0 0 0
+        0 0 0 0 A A B 0 0 A A B 0 0 0 0
+        0 0 0 0 F F F 0 0 F F F 0 0 0 0
+        0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    `;
 }

@@ -18,35 +18,92 @@
 
 // let facingLeft = false;
 
-// let mySprite = sprites.create(sprites.platformer.mainLeftIdle, SpriteKind.Player)
-// mySprite.setFlag(SpriteFlag.StayInScreen, true);
-// mySprite.ay = 400;
-// controller.moveSprite(mySprite, 100, 0);
+// let hero = sprites.create(sprites.platformer.mainLeftIdle, SpriteKind.Player)
+// hero.setFlag(SpriteFlag.StayInScreen, true);
+// hero.ay = 400;
+// controller.moveSprite(hero, 100, 0);
 // controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-//     mySprite.vy = -200
+//     hero.vy = -200
 // })
 // scene.setBackgroundColor(0x9)
 
 // /** running **/
-// let animRunLeft = animation.createAnimation(ActionKind.RunningLeft, 200)
-// animation.attachAnimation(mySprite, animRunLeft)
-// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun0)
-// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun1)
-// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun2)
-// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun3)
+// let mainRunLeft = animation.createAnimation(ActionKind.RunningLeft, 200)
+// animation.attachAnimation(hero, mainRunLeft)
+// mainRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun0)
+// mainRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun1)
+// mainRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun2)
+// mainRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun3)
 
-// let animRunRight = animation.createAnimation(ActionKind.RunningRight, 200)
-// animation.attachAnimation(mySprite, animRunRight)
-// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun0)
-// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun1)
-// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun2)
-// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun3)
+// let mainRunRight = animation.createAnimation(ActionKind.RunningRight, 200)
+// animation.attachAnimation(hero, mainRunRight)
+// mainRunRight.addAnimationFrame(sprites.platformer.mainRightRun0)
+// mainRunRight.addAnimationFrame(sprites.platformer.mainRightRun1)
+// mainRunRight.addAnimationFrame(sprites.platformer.mainRightRun2)
+// mainRunRight.addAnimationFrame(sprites.platformer.mainRightRun3)
 
 
 // /** idle **/
-// let animIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 200);
-// animIdleLeft.addAnimationFrame(sprites.platformer.mainLeftIdle);
-// animation.attachAnimation(mySprite, animIdleLeft)
+// let mainIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 200);
+// mainIdleLeft.addAnimationFrame(sprites.platformer.mainLeftIdle);
+// animation.attachAnimation(hero, mainIdleLeft)
+
+// let mainIdleRight = animation.createAnimation(ActionKind.IdleRight, 200);
+// animation.attachAnimation(hero, mainIdleRight)
+// mainIdleRight.addAnimationFrame(sprites.platformer.mainRightIdle);
+
+// /** crouch */
+
+// let mainCrouchLeft = animation.createAnimation(ActionKind.CrouchLeft, 200);
+// animation.attachAnimation(hero, mainCrouchLeft);
+// mainCrouchLeft.addAnimationFrame(sprites.platformer.mainLeftCrouch);
+
+// let mainCrouchRight = animation.createAnimation(ActionKind.CrouchRight, 200);
+// animation.attachAnimation(hero, mainCrouchRight);
+// mainCrouchRight.addAnimationFrame(sprites.platformer.mainRightCrouch);
+
+// /** jumping **/
+// // Because there isn't currently an easy way to say "play this animation a single time
+// // and stop at the end", this just adds a bunch of the same frame at the end to accomplish
+// // the same behavior
+// let mainJumpLeft = animation.createAnimation(ActionKind.JumpingLeft, 200);
+// animation.attachAnimation(hero, mainJumpLeft)
+// mainJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump0);
+// mainJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump1);
+// for (let i = 0; i < 30; i++)
+//     mainJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump2);
+
+// let mainJumpRight = animation.createAnimation(ActionKind.JumpingRight, 200);
+// animation.attachAnimation(hero, mainJumpRight)
+// mainJumpRight.addAnimationFrame(sprites.platformer.mainRightJump0);
+// mainJumpRight.addAnimationFrame(sprites.platformer.mainRightJump1);
+// for (let i = 0; i < 30; i++)
+//     mainJumpRight.addAnimationFrame(sprites.platformer.mainRightJump2);
+
+// game.onUpdate(function () {
+//     if (hero.vx < 0) {
+//         facingLeft = true;
+//     } else if (hero.vx > 0) {
+//         facingLeft = false;
+//     }
+
+//     if (controller.down.isPressed()) {
+//         animation.setAction(hero, facingLeft ? ActionKind.CrouchLeft : ActionKind.CrouchRight);
+//         return;
+//     }
+
+//     if (hero.vy < 20) {
+//         animation.setAction(hero, facingLeft ? ActionKind.JumpingLeft : ActionKind.JumpingRight)
+//         return;
+//     }
+//     if (hero.vx < 0) {
+//         animation.setAction(hero, ActionKind.RunningLeft)
+//     } else if (hero.vx > 0) {
+//         animation.setAction(hero, ActionKind.RunningRight)
+//     } else {
+//         animation.setAction(hero, facingLeft ? ActionKind.IdleLeft : ActionKind.IdleRight)
+//     }
+// })
 
 // let animIdleRight = animation.createAnimation(ActionKind.IdleRight, 200);
 // animation.attachAnimation(mySprite, animIdleRight)

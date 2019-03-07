@@ -1,5 +1,4 @@
 // requires animation package
-
 // enum SpriteKind {
 //     Player,
 //     Projectile,
@@ -12,16 +11,17 @@
 //     IdleLeft,
 //     IdleRight,
 //     JumpingLeft,
-//     JumpingRight
+//     JumpingRight,
+//     CrouchLeft,
+//     CrouchRight
 // }
 
 // let facingLeft = false;
 
-// let mySprite = sprites.create(platformerspritesheet.main_left_idle, SpriteKind.Player)
+// let mySprite = sprites.create(sprites.platformer.mainLeftIdle, SpriteKind.Player)
 // mySprite.setFlag(SpriteFlag.StayInScreen, true);
 // mySprite.ay = 400;
 // controller.moveSprite(mySprite, 100, 0);
-
 // controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 //     mySprite.vy = -200
 // })
@@ -30,61 +30,66 @@
 // /** running **/
 // let animRunLeft = animation.createAnimation(ActionKind.RunningLeft, 200)
 // animation.attachAnimation(mySprite, animRunLeft)
-// animRunLeft.addAnimationFrame(platformerspritesheet.main_left_run0)
-// animRunLeft.addAnimationFrame(platformerspritesheet.main_left_run1)
-// animRunLeft.addAnimationFrame(platformerspritesheet.main_left_run2)
-// animRunLeft.addAnimationFrame(platformerspritesheet.main_left_run3)
+// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun0)
+// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun1)
+// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun2)
+// animRunLeft.addAnimationFrame(sprites.platformer.mainLeftRun3)
 
 // let animRunRight = animation.createAnimation(ActionKind.RunningRight, 200)
 // animation.attachAnimation(mySprite, animRunRight)
-// animRunRight.addAnimationFrame(platformerspritesheet.main_right_run0)
-// animRunRight.addAnimationFrame(platformerspritesheet.main_right_run1)
-// animRunRight.addAnimationFrame(platformerspritesheet.main_right_run2)
-// animRunRight.addAnimationFrame(platformerspritesheet.main_right_run3)
+// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun0)
+// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun1)
+// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun2)
+// animRunRight.addAnimationFrame(sprites.platformer.mainRightRun3)
 
 
 // /** idle **/
 // let animIdleLeft = animation.createAnimation(ActionKind.IdleLeft, 200);
-// animIdleLeft.addAnimationFrame(platformerspritesheet.main_left_idle);
+// animIdleLeft.addAnimationFrame(sprites.platformer.mainLeftIdle);
 // animation.attachAnimation(mySprite, animIdleLeft)
 
 // let animIdleRight = animation.createAnimation(ActionKind.IdleRight, 200);
 // animation.attachAnimation(mySprite, animIdleRight)
-// animIdleRight.addAnimationFrame(platformerspritesheet.main_right_idle);
+// animIdleRight.addAnimationFrame(sprites.platformer.mainRightIdle);
+
+// /** crouch */
+
+// let animCrouchLeft = animation.createAnimation(ActionKind.CrouchLeft, 200);
+// animation.attachAnimation(mySprite, animCrouchLeft);
+// animCrouchLeft.addAnimationFrame(sprites.platformer.mainLeftCrouch);
+
+// let animCrouchRight = animation.createAnimation(ActionKind.CrouchRight, 200);
+// animation.attachAnimation(mySprite, animCrouchRight);
+// animCrouchRight.addAnimationFrame(sprites.platformer.mainRightCrouch);
 
 // /** jumping **/
-// // this behavior isn't what is intended; jumps in mario go to the key frame and then stop
-// // to emulate that without having events or one of animations, basically have to just add
-// // a bunch of extra frames
+// // Because there isn't currently an easy way to say "play this animation a single time
+// // and stop at the end", this just adds a bunch of the same frame at the end to accomplish
+// // the same behavior
 // let animJumpLeft = animation.createAnimation(ActionKind.JumpingLeft, 200);
 // animation.attachAnimation(mySprite, animJumpLeft)
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump0);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump1);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
-// animJumpLeft.addAnimationFrame(platformerspritesheet.main_left_jump2);
+// animJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump0);
+// animJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump1);
+// for (let i = 0; i < 30; i++)
+//     animJumpLeft.addAnimationFrame(sprites.platformer.mainLeftJump2);
 
 // let animJumpRight = animation.createAnimation(ActionKind.JumpingRight, 200);
 // animation.attachAnimation(mySprite, animJumpRight)
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump0);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump1);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
-// animJumpRight.addAnimationFrame(platformerspritesheet.main_right_jump2);
+// animJumpRight.addAnimationFrame(sprites.platformer.mainRightJump0);
+// animJumpRight.addAnimationFrame(sprites.platformer.mainRightJump1);
+// for (let i = 0; i < 30; i++)
+//     animJumpRight.addAnimationFrame(sprites.platformer.mainRightJump2);
 
 // game.onUpdate(function () {
 //     if (mySprite.vx < 0) {
 //         facingLeft = true;
 //     } else if (mySprite.vx > 0) {
 //         facingLeft = false;
+//     }
+
+//     if (controller.down.isPressed()) {
+//         animation.setAction(mySprite, facingLeft ? ActionKind.CrouchLeft : ActionKind.CrouchRight);
+//         return;
 //     }
 
 //     if (mySprite.vy < 20) {
